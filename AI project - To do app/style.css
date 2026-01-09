@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.todo-container {
+  background: white;
+  width: 350px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+}
+
+.input-group {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+input {
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+}
+
+button {
+  padding: 8px 12px;
+  cursor: pointer;
+  background: #007bff;
+  color: white;
+  border: none;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  gap: 8px;
+}
+
+li span {
+  flex: 1;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+li.completed span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.delete-btn {
+  background: red;
+  border: none;
+  color: white;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Task card as sticky note */
+li {
+  background: #fff8b5; /* sticky note color */
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+
+  box-shadow: 
+    0 4px 6px rgba(0, 0, 0, 0.15);
+
+  transform: rotate(-1deg);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Slight hover lift */
+li:hover {
+  transform: rotate(0deg) scale(1.02);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Completed task look */
+li.completed {
+  background: #e6e6e6;
+}
+
+/* Task text */
+li span {
+  flex: 1;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+/* Delete button like a pin */
+.delete-btn {
+  background: #ff5c5c;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  font-size: 12px;
+  line-height: 22px;
+}
